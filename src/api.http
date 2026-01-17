@@ -14,3 +14,50 @@ Content-Type: application/json
     "firstname": "asdasd",
     "lastname": "Smxzcxzqweith"
 }
+
+### ==================== HOTEL CRUD ====================
+
+### GET all hotels
+GET http://localhost:3000/api/hotels
+
+###
+### GET hotel by ID
+GET http://localhost:3000/api/hotels/2
+
+###
+### CREATE new hotel
+POST http://localhost:3000/api/hotels
+Content-Type: application/json
+
+{
+    "name": "Grandeur Palace Hotel",
+    "location": "Bangkok",
+    "rating": 5,
+    "contact": "+66-2-123-4567"
+}
+
+###
+### CREATE another hotel
+POST http://localhost:3000/api/hotels
+Content-Type: application/json
+
+{
+    "name": "Riverside Resort",
+    "location": "Chiang Mai",
+    "rating": 4,
+    "contact": "+66-5-987-6543"
+}
+
+###
+### UPDATE hotel by ID
+PUT http://localhost:3000/api/hotels/2
+Content-Type: application/json
+
+{
+    "name": "Grandeur Palace Hotel - Updated",
+    "rating": 4.5
+}
+
+###
+### DELETE hotel by ID
+DELETE http://localhost:3000/api/hotels/2
